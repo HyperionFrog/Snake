@@ -1,7 +1,9 @@
+clear
+clc
 playAgain = true;
 while playAgain
 scene_size = 24;
-snake_scene = simpleGameEngine('newsprites.png', 16, 16, 8, [245, 245, 245]);
+snake_scene = simpleGameEngine('sprites.png', 16, 16, 8, [245, 245, 245]);
 
 bottom_layer = ones(scene_size,scene_size);
 top_layer = ones(scene_size,scene_size);
@@ -16,8 +18,11 @@ keyInput = "0";
 snake_size = size(snake_pos_x, 2);
 isHittingTheWall = false;
 notDied = true;
+applePosX = 1;
+applePosY = 1;
+youWin = false;
 
-while notDied
+while notDied == true
 
     % Write snake positions
     for i = 1:snake_size
@@ -32,7 +37,7 @@ while notDied
     end
 
     keyInput = getKeyboardInput(snake_scene, keyInput);
-    fprintf(keyInput + "\n");
+    %fprintf(keyInput + "\n");
 
     % Change direction only if keyInput is a valid input
     % The first element in snake_pos should be the head
@@ -89,6 +94,7 @@ while notDied
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
               break;
+              break;
         end
     if c == 36
        [applePosY, applePosX] = appleGen();
@@ -97,13 +103,24 @@ while notDied
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
               break;
+              break;
         end
-    if c == 54
+    if c == 48
        [applePosY, applePosX] = appleGen();
        top_layer(applePosY, applePosX) = 2;
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
+              break;
+        end
+    if c == 60
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
               break;
         end
     if c == 72
@@ -113,6 +130,25 @@ while notDied
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
               break;
+              break;
+        end
+    if c == 78
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
+        end
+    if c == 84
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
         end
     if c == 90
        [applePosY, applePosX] = appleGen();
@@ -120,6 +156,25 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
+              break;
+        end
+    if c == 96
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
+        end
+    if c == 102
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
               break;
         end
     if c == 108
@@ -129,6 +184,25 @@ while notDied
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
               break;
+              break;
+    end
+    if c == 114
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
+        end
+      if c == 120
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+      end
+      if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
         end
     if c == 126
        [applePosY, applePosX] = appleGen();
@@ -136,6 +210,25 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
+              break;
+        end
+    if c == 132
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
+        end
+    if c == 138
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
               break;
         end
     if c == 144
@@ -145,6 +238,25 @@ while notDied
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
               break;
+              break;
+        end
+    if c == 150
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
+        end
+    if c == 156
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
         end
     if c == 162
        [applePosY, applePosX] = appleGen();
@@ -152,6 +264,25 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
+              break;
+        end
+    if c == 168
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
+        end
+    if c == 174
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
               break;
         end
     if c == 180
@@ -161,6 +292,25 @@ while notDied
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
               break;
+              break;
+        end
+    if c == 186
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
+        end
+    if c == 192
+       [applePosY, applePosX] = appleGen();
+       top_layer(applePosY, applePosX) = 2;
+    end
+    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
+              notDied = false;
+              break;
+              break;
         end
     if c == 198
        [applePosY, applePosX] = appleGen();
@@ -169,150 +319,50 @@ while notDied
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
               break;
-    end
-    if c == 216
+              break;
+        end
+    if c == 204
        [applePosY, applePosX] = appleGen();
        top_layer(applePosY, applePosX) = 2;
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
               break;
-        end
-      if c == 234
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-      end
-      if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
               break;
-        end
-    if c == 252
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
     end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 270
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
+    if c == 222
+        close(snake_scene.my_figure);
+        youWin = true;
+        notDied = false;
+        break;
+        
     end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 288
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 306
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 324
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 342
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 360
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 378
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 396
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 414
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 432
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 450
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 468
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;
-        end
-    if c == 486
-       [applePosY, applePosX] = appleGen();
-       top_layer(applePosY, applePosX) = 2;
-    end
-    if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
-              notDied = false;
-              break;w
-        end
 end
-%playAgainScene = sge.createScene('Play Again?');
+   % playAgainScene = sge.createScene('Play Again?');
 
- %   playAgainGraph = sge.createGraph('Play Again? Graph', [0, 1, 2], [0, 1, 4]);
+   % playAgainGraph = sge.createGraph('Play Again? Graph', [0, 1, 2], [0, 1, 4]);
     
-  %  playAgainGraph.setGraphProperty('title', 'Play Again? Graph');
+   % playAgainGraph.setGraphProperty('title', 'Play Again? Graph');
    % playAgainGraph.setGraphProperty('xAxisLabel', 'X-Axis');
-    %playAgainGraph.setGraphProperty('yAxisLabel', 'Y-Axis');
-    %playAgainGraph.setGraphProperty('lineColor', [1, 0, 0]);
+   % playAgainGraph.setGraphProperty('yAxisLabel', 'Y-Axis');
+   % playAgainGraph.setGraphProperty('lineColor', [1, 0, 0]);
 
-    %playAgainScene.addGraph(playAgainGraph);
-    close(snake_scene.my_figure);
-    answer = input("Play again? (y for yes and n for no): ", "s");
+   %playAgainScene.addGraph(playAgainGraph);
+   
+   close('all');
 
-    if answer == 'n'
-        playAgain = false;
-    end
+   if youWin == false
+        answer = input("Game Over! Play again? (y for yes and n for no): ", "s");
+
+        if answer == 'n'
+            playAgain = false;
+        end
+   end
+   if youWin == true
+        answer1 = input("You win! Play again? (y for yes, n for no)", "s");
+        
+        if answer1 == 'n'
+            playAgain = false;
+        end
+   end
 end
