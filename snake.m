@@ -1,5 +1,5 @@
 scene_size = 24;
-snake_scene = simpleGameEngine('retro_pack.png', 16, 16, 8, [245, 245, 245]);
+snake_scene = simpleGameEngine('sprites.png', 16, 16, 8, [245, 245, 245]);
 
 bottom_layer = ones(scene_size,scene_size);
 top_layer = ones(scene_size,scene_size);
@@ -76,5 +76,25 @@ while true
             snake_pos_x = circshift(snake_pos_x, 1);
             snake_pos_y = circshift(snake_pos_y, 1);
         end
+    end
+    if applePosX == snake_pos_x && applePosY == snake_pos_y 
+        break
+    end
+    if isHittingTheWall
+        break
+    end
+end
+
+% Load sprite sheet
+spriteSheetImage = imread('spritesheet.png');
+
+% Create red sprites
+redSpriteImage = spriteSheetImage(1:24, 1:24, :);
+redSprite = sge.createSprite(redSpriteImage);
+
+% Draw red sprites
+for i = 1:25
+    for j = 1:25
+        sge.addSprite(redSprite, 24 * (i - 1), 24 * (j - 1));
     end
 end
