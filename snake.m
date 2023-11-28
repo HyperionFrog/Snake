@@ -359,7 +359,7 @@ end
         end
    end
    if youWin == true
-        answer1 = input("You win! Play again? (y for yes, n for no)", "s");
+        answer1 = input("You win! Play again? (y for yes, n for no): ", "s");
         
         if answer1 == 'n'
             playAgain = false;
