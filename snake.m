@@ -349,7 +349,7 @@ end
 
    %playAgainScene.addGraph(playAgainGraph);
    
-   close('all');
+   close all;
 
    if youWin == false
         answer = input("Game Over! Play again? (y for yes and n for no): ", "s");
