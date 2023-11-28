@@ -88,6 +88,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 36
        [applePosY, applePosX] = appleGen();
@@ -95,6 +96,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 54
        [applePosY, applePosX] = appleGen();
@@ -102,6 +104,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 72
        [applePosY, applePosX] = appleGen();
@@ -109,6 +112,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 90
        [applePosY, applePosX] = appleGen();
@@ -116,6 +120,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 108
        [applePosY, applePosX] = appleGen();
@@ -123,6 +128,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 126
        [applePosY, applePosX] = appleGen();
@@ -130,6 +136,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 144
        [applePosY, applePosX] = appleGen();
@@ -137,6 +144,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 162
        [applePosY, applePosX] = appleGen();
@@ -144,6 +152,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 180
        [applePosY, applePosX] = appleGen();
@@ -151,6 +160,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 198
        [applePosY, applePosX] = appleGen();
@@ -158,6 +168,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
     end
     if c == 216
        [applePosY, applePosX] = appleGen();
@@ -165,6 +176,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
       if c == 234
        [applePosY, applePosX] = appleGen();
@@ -172,6 +184,7 @@ while notDied
       end
       if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 252
        [applePosY, applePosX] = appleGen();
@@ -179,6 +192,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 270
        [applePosY, applePosX] = appleGen();
@@ -186,6 +200,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 288
        [applePosY, applePosX] = appleGen();
@@ -193,6 +208,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 306
        [applePosY, applePosX] = appleGen();
@@ -200,6 +216,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 324
        [applePosY, applePosX] = appleGen();
@@ -207,6 +224,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 342
        [applePosY, applePosX] = appleGen();
@@ -214,6 +232,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 360
        [applePosY, applePosX] = appleGen();
@@ -221,6 +240,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 378
        [applePosY, applePosX] = appleGen();
@@ -228,6 +248,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 396
        [applePosY, applePosX] = appleGen();
@@ -235,6 +256,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 414
        [applePosY, applePosX] = appleGen();
@@ -242,6 +264,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 432
        [applePosY, applePosX] = appleGen();
@@ -249,6 +272,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 450
        [applePosY, applePosX] = appleGen();
@@ -256,6 +280,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 468
        [applePosY, applePosX] = appleGen();
@@ -263,6 +288,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;
         end
     if c == 486
        [applePosY, applePosX] = appleGen();
@@ -270,6 +296,7 @@ while notDied
     end
     if ismember(applePosX, snake_pos_x) && ismember(applePosY, snake_pos_y)
               notDied = false;
+              break;w
         end
 end
 %playAgainScene = sge.createScene('Play Again?');
